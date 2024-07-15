@@ -3,14 +3,16 @@ package biblioteca;
 import java.util.ArrayList; //Array dinamico que vai dobrando a cada limite de dados;
 
 public class Biblioteca {
-    ArrayList<Livro> acervo;
+    ArrayList<Livro> acervo; //Cria um array dinamico para o acervo;
 
     Biblioteca(){
         acervo = new ArrayList<Livro>();
+        //Atribui o arraydinamico ao acervo
     }
 
     void adicionarLivro(Livro livro){
         acervo.add(livro);
+        // metodo que adiciona livros ao acervo
     }
 
     boolean removerLivro(String isbn){
@@ -23,6 +25,7 @@ public class Biblioteca {
         }
 
         return false;
+        //Metodo que remove livros do acervo;
     }
 
     ArrayList<Livro> listaTodos(){
@@ -39,19 +42,19 @@ public class Biblioteca {
         }
 
         return emprestados;
+        //Metodo que registra os livros emprestados
     }
 
-
     //To-do: verificar essa parte do código com o do prof;
-    /**
     ArrayList<Livro> listaDisponivel(){
         ArrayList<Livro> disponiveis = new ArrayList<Livro>();
 
         for(Livro livro : acervo){
             if(!livro.estaEmprestado()){
-                disponiveis 
+                disponiveis.add(livro);
             }
         }
+
+        return disponiveis;
     }
-    */
 }

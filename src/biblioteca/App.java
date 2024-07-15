@@ -29,29 +29,39 @@ public class App {
         , 1967
         , "961");
 
+        Livro livro6 = new Livro("Diario de Anne Frank"
+        , "Otto Frank"
+        , 1992
+        , "639");
+
         biblioteca.adicionarLivro(livro1);
         biblioteca.adicionarLivro(livro2);
         biblioteca.adicionarLivro(livro3);
         biblioteca.adicionarLivro(livro4);
         biblioteca.adicionarLivro(livro5);
+        biblioteca.adicionarLivro(livro6);
+
+        /** TRECHO QUE IMPRIMI TODOS OS LIVROS DO ACERVO;
+        System.err.println("Livros do Acervo");
+        for(Livro livro: biblioteca.listaTodos()){
+            System.out.println(livro.converteParaString());
+        }
+        */
 
         livro1.emprestar();
         livro2.emprestar();
         livro3.emprestar();
+        livro6.emprestar();
+        livro2.devolver();
 
         System.out.println("Livros emprestados");
         for(Livro livro : biblioteca.listaEmprestados()){
             System.out.println(livro.converteParaString());
         }
         
-        //Colocar em pretica após verificar a parte de livros disponiveis
-        //*******************************************************************
-
-        /** 
         System.out.println("Livros disnponíveis");
-        for( Livro livro: biblioteca.listaDisponivel){
+        for(Livro livro: biblioteca.listaDisponivel()){
             System.out.println(livro.converteParaString());
         }
-        */
     }
 }
