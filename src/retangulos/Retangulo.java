@@ -33,6 +33,7 @@ public class Retangulo {
      * * lado inferior do retângulo A está acima do lado superior do retângulo B
      * Inversamente, se nenhuma dessas condições for verdadeira, os retângulos interseccionam.
      */
+
     boolean interseciona(Retangulo b) {
         boolean aEsquerdaDeB = this.centrox + this.largura / 2 < b.centrox - b.largura / 2;
         boolean aDireitaDeB = this.centrox - this.largura / 2 > b.centrox + b.largura / 2;
@@ -51,6 +52,7 @@ public class Retangulo {
      * * lado direito do retângulo contido está à esquerda do lado direito do retângulo contenedor
      * Se todas essas condições forem verdadeiras, o retângulo contenedor contém o retângulo contido.
      */
+    
     boolean contem(Retangulo b) {
         double aEsquerdo = this.centrox - this.largura / 2;
         double aDireito = this.centrox + this.largura / 2;
